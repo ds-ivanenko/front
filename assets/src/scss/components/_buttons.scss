@@ -1,6 +1,7 @@
 @import "../vars";
 @import "../mixins";
 
+/*
 .button {
   --button-spinner-size: 20px;
 
@@ -212,4 +213,42 @@
     padding-top: 8px;
     padding-bottom: 8px;
   }
+}
+*/
+
+.btn {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -.28px;
+
+    &-blue {
+      font-size: 16px;
+      background: #E7FAFE;
+      padding: 21px 27px 20px 27px;
+      letter-spacing: -0.32px;
+      line-height: normal;
+
+        &:hover {
+          background: #CBEFF7;
+        }
+    }
+
+    &.video-btn {
+      background: #000;
+      color: #fff;
+      padding: 18px 36px 18px 37px;
+
+      &:hover {
+        background: $color-primary-light;
+      }
+    }
+
+  &:hover {
+    cursor: pointer;
+  }
+
 }

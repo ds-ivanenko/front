@@ -1,5 +1,5 @@
 .hero__slider {
-  padding: 40px 0;
+  padding-top: 40px;
 
   .splide__slide {
     position: relative;
@@ -99,29 +99,6 @@
               }
             }
 
-          }
-
-          .video-btn {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            border-radius: 16px;
-            background: $color-primary;
-            color: #fff;
-            padding: 18px 36px 18px 37px;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: -0.28px;
-
-            &:hover {
-              background: $color-primary-light;
-              cursor: pointer;
-            }
-
-
-            a {
-              color: #fff;
-            }
           }
 
         }
