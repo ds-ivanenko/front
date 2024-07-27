@@ -1,0 +1,39 @@
+@import "../vars";
+@import "../mixins";
+
+.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 0;
+    align-items: center;
+
+    .header__top-left, .header__top-right {
+      flex-grow: 1;
+      flex-basis: 0%;
+    }
+
+    .header__top-right ul {
+      display: flex;
+      gap: 40px;
+      justify-content: flex-end;
+    }
+
+    &-menu ul {
+      display: flex;
+      gap: 60px;
+
+      a {
+        font-weight: 500;
+        transition: all 0.5ms;
+
+        &:hover {
+          color: $color-primary-light;
+        }
+      }
+    }
+
+  }
+}

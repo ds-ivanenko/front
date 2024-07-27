@@ -1,0 +1,109 @@
+@import "../vars";
+@import "../mixins";
+
+input[type="text"],
+input[type="email"],
+input.input-text,
+body .ff-default .ff-el-form-control {
+  font: $font-smaller;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  height: 34px;
+  padding: 0 8px;
+  width: 100%;
+
+  &:focus, &:focus-visible {
+    border-color: $color-primary;
+    outline: unset;
+    box-shadow: unset;
+  }
+}
+
+textarea,
+body .ff-default textarea.ff-el-form-control {
+  padding: 8px;
+  resize: vertical;
+  max-height: 300px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  appearance: none;
+  width: 1px;
+
+  & + span, & + label {
+    left: 0;
+    padding-left: 32px;
+    font: $font-caption;
+    cursor: pointer;
+    user-select: none;
+    line-height: normal;
+    color: $color-primary;
+    display: inline-block !important;
+    position: relative;
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+
+    &::before {
+      border: 1px solid $color-border;
+      background: #fff;
+    }
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='20' viewBox='0 96 960 960' width='20'%3E%3Cpath d='M395 789.088 207.912 601l68.653-68.653L395 649.782l288.435-287.435L752.088 432 395 789.088Z' fill='%23ffffff'/%3E%3C/svg%3E");
+      opacity: 0;
+      background-size: 20px auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      &::before {
+        border-color: $color-secondary;
+      }
+    }
+  }
+
+  &:checked {
+    & + span, & + label {
+      &::before {
+        background: $color-secondary;
+        border-color: $color-secondary;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.custom-checkbox-label,
+.woocommerce-form__label-for-checkbox {
+  position: relative;
+  line-height: normal;
+}
+
+.fluentform {
+  .ff-message-success {
+    box-shadow: unset;
+    font: $font-smaller;
+  }
+}
+
+.form-label {
+  display: block;
+  text-align: left;
+}
+

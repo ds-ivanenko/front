@@ -1,0 +1,38 @@
+@import "../vars";
+@import "../mixins";
+
+.socials {
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  a {
+    color: $color-border;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--dark {
+    .socials {
+      &__list {
+        gap: 16px;
+      }
+    }
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

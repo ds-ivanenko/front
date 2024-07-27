@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'mixins';
+
+.splide {
+  .splide__pagination__page {
+    margin: 4px;
+    background: $color-border;
+    opacity: 1;
+
+    &.is-active {
+      background: $color-secondary;
+      transform: scale(1);
+    }
+  }
+}

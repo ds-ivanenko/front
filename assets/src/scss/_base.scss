@@ -1,0 +1,51 @@
+@import 'vars';
+@import 'mixins';
+
+:root {
+  --announcement-height: 0px;
+  --header-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  padding: 0;
+  text-decoration: none;
+  font: $font-standard;
+  color: $color-primary;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font: $font-standard;
+  color: $color-primary;
+  background: $bg-color;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}

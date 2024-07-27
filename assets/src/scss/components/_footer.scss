@@ -1,0 +1,123 @@
+@import "../vars";
+@import "../mixins";
+
+.site-footer {
+  background: $color-primary-light;
+  padding: 56px 0;
+  margin-top: auto;
+  overflow: hidden;
+
+  &__nav {
+    .menu {
+      @include list-default;
+      display: flex;
+
+      .menu-item {
+        a {
+          text-decoration: unset;
+          color: $color-primary;
+
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 56px;
+
+    @include screen-lg {
+      gap: 32px;
+    }
+
+    @include screen-sm {
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    .site-footer {
+      &__group, &__nav, &__form {
+        flex-basis: 33.3333%;
+
+        @include screen-sm {
+          flex-basis: 100%;
+        }
+      }
+    }
+
+    .menu {
+      flex-direction: column;
+      gap: 16px;
+
+      .menu-item {
+        font: $font-smaller;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__form {
+    .subscription-form {
+      max-width: 360px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__logo {
+
+  }
+
+  &__text {
+    font: $font-caption;
+  }
+
+  &__socials {
+
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid lighten($color-primary, 80%);
+
+    @include screen-xs {
+      flex-direction: column;
+      align-items: unset;
+      gap: 8px;
+    }
+
+    .menu {
+      gap: 32px;
+
+      @include screen-xs {
+        justify-content: space-between;
+      }
+
+      .menu-item {
+        font: $font-caption;
+      }
+    }
+  }
+
+  &__copyright {
+    font: $font-caption;
+
+    @include screen-xs {
+      text-align: right;
+    }
+  }
+}

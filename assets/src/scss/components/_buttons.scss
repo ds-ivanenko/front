@@ -1,0 +1,215 @@
+@import "../vars";
+@import "../mixins";
+
+.button {
+  --button-spinner-size: 20px;
+
+  display: inline-flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font: $font-standard;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50px;
+  padding: 0 24px;
+  height: 38px;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  border: none;
+  background: $color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transition: all .1s;
+
+  &:hover {
+    background: lighten($color-primary, 5%);
+    color: #fff;
+  }
+
+  &:focus, &:focus-within {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline-offset: 4px;
+    outline: $color-secondary dashed 2px;
+  }
+
+  .icon {
+    @include flex-center;
+    height: 16px;
+    width: 16px;
+
+    svg {
+      display: block;
+      color: $color-primary;
+    }
+  }
+
+  &.disabled, &:disabled {
+    //opacity: .5;
+    background: #F4F2F3;
+    color: #CCCCCC;
+  }
+
+  //&,
+  //&.primary,
+  //&.light {
+  //  &:not(.disabled):hover {
+  //    box-shadow: $box-shadow;
+  //  }
+  //}
+
+  &--bordered {
+    border: 1px solid $color-primary;
+    background: transparent;
+    color: $color-primary;
+
+    &:hover {
+      background: $color-primary;
+      color: white;
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    color: #fff;
+
+    &:hover {
+      background: lighten($color-secondary, 5%);
+      color: #fff;
+    }
+  }
+
+  &.light {
+    background: white;
+
+    &:focus-visible {
+      outline-color: #fff;
+    }
+  }
+
+  &.error {
+    background: $color-failure !important;
+    color: white !important;
+  }
+
+  &.success {
+    background: $color-success !important;
+    border-color: $color-success !important;
+    color: white !important;
+  }
+
+  @keyframes button-spinner-rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &.working {
+    color: transparent;
+    pointer-events: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - var(--button-spinner-size) / 2);
+      top: calc(50% - var(--button-spinner-size) / 2);
+      border: 2px solid var(--button-spinner-color, #fff);
+      border-top-color: transparent;
+      border-left-color: transparent;
+      box-sizing: border-box;
+      width: var(--button-spinner-size);
+      height: var(--button-spinner-size);
+      border-radius: 50%;
+      animation: button-spinner-rotation 0.6s infinite linear;
+    }
+  }
+
+  &.clean {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    .button-icon {
+
+    }
+
+    .button-text {
+      color: $color-primary;
+      font: $font-smaller;
+      font-weight: 700;
+    }
+  }
+
+  &.tertiary {
+    background: transparent;
+    gap: 8px;
+    padding: 0;
+    height: 24px;
+
+    .button-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s;
+
+      svg {
+        color: $color-primary;
+        width: 10px;
+        height: 16px;
+      }
+    }
+
+    .button-text {
+      color: $color-primary;
+    }
+
+    &:hover {
+      box-shadow: unset;
+
+      .button-icon {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  &--arrow {
+    background: transparent;
+    font: $font-smaller;
+    font-weight: 700;
+    color: $color-primary;
+    padding: 0;
+
+    &::after {
+      content: '→';
+      transition: all .1s;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $color-primary;
+
+      &::after {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &--wrap {
+    white-space: unset;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
