@@ -1,0 +1,19 @@
+.chef__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  padding-top: 143px;
+
+  h2 {
+    font: $font-h3;
+    line-height: normal;
+    letter-spacing: -1.92px;
+  }
+
+  p {
+    padding: 24px 0 72px;
+    max-width: 508px;
+  }
+
+}
