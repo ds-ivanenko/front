@@ -42,10 +42,16 @@ ul {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   font: $font-standard;
   color: $color-primary;
   background: $bg-color;
+}
+
+.main {
+  overflow: hidden;
 }
 
 .container {
