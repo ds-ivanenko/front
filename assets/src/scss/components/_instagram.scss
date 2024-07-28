@@ -1,0 +1,44 @@
+.instagram-section {
+  background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
+
+  .instagram__wrap {
+    padding-bottom: 80px;
+
+    .instagram__title {
+
+      padding-top: 240px;
+      text-align: center;
+
+      h2 {
+        font: $font-h3;
+        line-height: normal;
+        letter-spacing: -1.92px;
+      }
+
+      p {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 840px;
+        padding-top: 24px;
+        padding-bottom: 80px;
+      }
+
+    }
+
+    .instagram__posts {
+
+      display: grid;
+      grid-template-columns: 290px 290px 290px 290px;
+      column-gap: 40px;
+
+    }
+
+    .instagram__link {
+      padding-top: 80px;
+      text-align: center;
+    }
+
+  }
+
+}
+
