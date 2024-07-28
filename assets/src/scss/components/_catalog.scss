@@ -63,7 +63,6 @@
 
         h3 {
           font: $font-h5-mobile;
-          font-style: normal;
           line-height: 32px;
           letter-spacing: -0.96px;
         }
@@ -75,6 +74,10 @@
         display: flex;
         gap: 24px;
         align-items: center;
+        font: $font-smaller;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.28px;
         color: $color-primary-light;
 
         .timer-info,
