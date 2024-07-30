@@ -7,6 +7,16 @@
     font: $font-h3;
     line-height: normal;
     letter-spacing: -1.92px;
+
+    @include screen-md {
+      font: $font-h3-tablet;
+    }
+
+    @include screen-sm {
+      font: $font-h3-mobile;
+    }
+
+
   }
 
   p {
@@ -15,15 +25,33 @@
     max-width: 706px;
     padding-top: 24px;
     padding-bottom: 96px;
+
+    @include screen-sm {
+      font: $font-smaller;
+    }
+
   }
 
 }
 
 .catalog__list {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: repeat(3, minmax(0, 400px));
   column-gap: 40px;
   grid-row-gap: 40px;
+  justify-content: center;
+
+  @include screen-sm {
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  @include screen-xs {
+    grid-template-columns: repeat(1, minmax(0, 400px));
+    column-gap: 20px;
+    grid-row-gap: 20px;
+  }
 
   .catalog_item {
 
@@ -31,12 +59,25 @@
     padding-top: 16px;
     background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 
+    &.ads {
+      background: none;
+    }
+
+    .ads__image {
+
+      img {
+        max-width: 100%;
+      }
+
+    }
+
     .item__image {
       position: relative;
       text-align: center;
 
       img {
         border-radius: 30px;
+        max-width: 90%;
       }
 
       .wishlist {
@@ -48,8 +89,24 @@
         width: 48px;
         height: 48px;
 
+        @include screen-md {
+          right: 8%;
+        }
+
+        @include screen-sm {
+          width: 38px;
+          height: 38px;
+          top: 15px;
+        }
+
+
         svg {
           margin: 12px 0;
+
+          @include screen-sm {
+            margin: 7px;
+          }
+
         }
       }
 
@@ -64,6 +121,13 @@
           font: $font-h5-mobile;
           line-height: 32px;
           letter-spacing: -0.96px;
+
+          @include screen-md {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 22px;
+          }
+
         }
 
       }
@@ -71,6 +135,7 @@
       .item__special-info {
         padding-top: 24px;
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
         align-items: center;
         font: $font-smaller;
@@ -78,6 +143,10 @@
         line-height: normal;
         letter-spacing: -0.28px;
         color: $color-primary-light;
+
+        @include screen-md {
+          gap: 15px;
+        }
 
         .timer-info,
         .cutlery {

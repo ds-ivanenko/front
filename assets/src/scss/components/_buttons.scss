@@ -18,6 +18,14 @@
       letter-spacing: -0.32px;
       line-height: normal;
 
+      @include screen-sm {
+        padding: 15px 20px;
+      }
+
+      @include screen-xs {
+        font-size: 12px;
+      }
+
         &:hover {
           background: #CBEFF7;
         }

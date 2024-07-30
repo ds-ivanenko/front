@@ -9,21 +9,151 @@
     justify-content: space-between;
     padding: 46px 0;
     align-items: center;
+    transition: all 0.3s ease 0s;
+
+    @include screen-md {
+      padding: 16px 0;
+      justify-content: center;
+    }
+
+    .mobile-menu {
+      display: none;
+
+      @include screen-md {
+        display: block;
+
+        position: fixed;
+        //top: -100%;
+        top: 59px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #e7fafe;
+        z-index: 1;
+        padding: 20px;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+
+        &.active {
+          //top: 59px;
+          left: 0;
+        }
+
+        .header__top-mobile-menu {
+
+          ul {
+
+            li {
+
+              padding: 0 0 20px 0;
+
+              a {
+                font-weight: 500;
+                transition: all .5ms;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .menu__button {
+      display: none;
+
+      @include screen-md {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 30px;
+        height: 20px;
+
+        span {
+          position: absolute;
+          background-color: #000;
+          top: 9px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          background-color: #000;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          transition: all 0.3s ease 0s;
+        }
+
+        &:before {
+          top: 0;
+        }
+
+        &:after {
+          bottom: 0;
+        }
+
+        &.active:before {
+          transform: rotate(45deg);
+          top: 9px;
+        }
+
+        &.active:after {
+          transform: rotate(-45deg);
+          bottom: 9px;
+        }
+
+        &.active span {
+          transform: scale(0);
+        }
+
+      }
+
+    }
 
     .header__top-left, .header__top-right {
       flex-grow: 1;
       flex-basis: 0%;
+
+      @include screen-md {
+        flex-grow: unset;
+        flex-basis: unset;
+      }
+
     }
 
     .header__top-right ul {
       display: flex;
       gap: 40px;
       justify-content: flex-end;
+
+      @include screen-md {
+        position: absolute;
+        right: 0;
+        top: 12px;
+        gap: 20px;
+      }
+
+      @include screen-xs {
+        display: none;
+      }
+
     }
 
     &-menu ul {
       display: flex;
       gap: 60px;
+
+      @include screen-md {
+        display: none;
+      }
 
       a {
         font-weight: 500;

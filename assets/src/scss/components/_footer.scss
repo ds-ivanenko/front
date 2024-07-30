@@ -12,16 +12,37 @@
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 
+    @include screen-sm {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .footer__logo {
+        text-align: center;
+      }
+
+    }
+
     p {
       padding-top: 16px;
       padding-bottom: 48px;
       font-weight: 400;
       line-height: 28px;
+
+      @include screen-md {
+        padding-bottom: 0;
+      }
+
     }
     ul {
       display: flex;
       align-items: center;
       gap: 60px;
+
+      @include screen-md {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
 
       li {
 
@@ -47,6 +68,10 @@
     padding-top: 48px;
     position: relative;
 
+    @include screen-sm {
+      display: flex;
+    }
+
     .footer__social {
       position: absolute;
       top: 45px;
@@ -55,6 +80,11 @@
       ul {
         display: flex;
         gap: 60px;
+
+        @include screen-sm {
+          gap: 20px;
+        }
+
       }
 
     }

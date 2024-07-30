@@ -6,6 +6,13 @@
   background: #E7F9FD;
   padding: 80px 0;
 
+  &::before,
+  &::after {
+    @include screen-sm {
+      display: none;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -32,11 +39,24 @@
 
   .subscription__title {
 
+    position: relative;
+    z-index: 10;
+
     h2 {
       font: $font-h3;
       line-height: normal;
       letter-spacing: -1.92px;
       text-align: center;
+
+      @include screen-md {
+        font: $font-h3-tablet;
+      }
+
+      @include screen-sm {
+        font: $font-h3-mobile;
+        text-align: center;
+      }
+
     }
 
     p {
@@ -45,6 +65,12 @@
       max-width: 706px;
       padding-top: 24px;
       padding-bottom: 64px;
+
+      @include screen-sm {
+        font: $font-smaller;
+        text-align: center;
+      }
+
     }
 
 
@@ -56,6 +82,8 @@
     background: #FFF;
     margin: 0 auto;
     padding: 10px 10px 10px 32px;
+    position: relative;
+    z-index: 10;
 
     form {
       display: flex;

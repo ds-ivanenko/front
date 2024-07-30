@@ -48,6 +48,13 @@ body {
   font: $font-standard;
   color: $color-primary;
   background: $bg-color;
+
+  @include screen-md {
+    &.lock {
+      overflow: hidden;
+    }
+  }
+
 }
 
 .main {

@@ -4,6 +4,10 @@
   .instagram__wrap {
     padding-bottom: 80px;
 
+    @include screen-sm {
+      padding-bottom: 30px;
+    }
+
     .instagram__title {
 
       padding-top: 240px;
@@ -13,6 +17,15 @@
         font: $font-h3;
         line-height: normal;
         letter-spacing: -1.92px;
+
+        @include screen-md {
+          font: $font-h3-tablet;
+        }
+
+        @include screen-sm {
+          font: $font-h3-mobile;
+        }
+
       }
 
       p {
@@ -21,6 +34,11 @@
         max-width: 840px;
         padding-top: 24px;
         padding-bottom: 80px;
+
+        @include screen-sm {
+          font: $font-smaller;
+        }
+
       }
 
     }
@@ -28,14 +46,45 @@
     .instagram__posts {
 
       display: grid;
-      grid-template-columns: 290px 290px 290px 290px;
+      grid-template-columns: repeat(4, minmax(0, 290px));
       column-gap: 40px;
+      justify-content: center;
+
+      @include screen-md {
+        grid-template-columns: repeat(3, minmax(0, 290px));
+        column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+
+
+      @include screen-xs {
+        grid-template-columns: repeat(2, minmax(0, 190px));
+        column-gap: 20px;
+        grid-row-gap: 20px;
+      }
+
+      .instagram__post-item {
+
+        a {
+
+          img {
+            max-width: 100%;
+          }
+
+        }
+
+      }
 
     }
 
     .instagram__link {
       padding-top: 80px;
       text-align: center;
+
+      @include screen-sm {
+        padding-top: 30px;
+      }
+
     }
 
   }

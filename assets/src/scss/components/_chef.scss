@@ -5,15 +5,57 @@
   gap: 44px;
   padding-top: 143px;
 
+  @include screen-sm {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+
+    .chef__image {
+      order: 1;
+    }
+
+    .chef__title {
+      order: 2;
+      text-align: center;
+    }
+
+  }
+
+
   h2 {
     font: $font-h3;
     line-height: normal;
     letter-spacing: -1.92px;
+
+    @include screen-md {
+      font: $font-h3-tablet;
+    }
+
+    @include screen-sm {
+      font: $font-h3-mobile;
+    }
+
+  }
+
+  .chef__image {
+
+    img {
+      max-width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+
   }
 
   p {
     padding: 24px 0 72px;
     max-width: 508px;
+
+    @include screen-sm {
+      font: $font-smaller;
+      padding: 24px 0 22px;
+    }
+
   }
 
 }

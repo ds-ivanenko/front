@@ -8,6 +8,16 @@
     font: $font-h3;
     line-height: normal;
     letter-spacing: -1.92px;
+
+    @include screen-md {
+      font: $font-h3-tablet;
+    }
+
+    @include screen-sm {
+      font: $font-h3-mobile;
+    }
+
+
   }
 }
 
@@ -16,7 +26,8 @@
   ul {
     display: flex;
     gap: 40px;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     padding-top: 80px;
 
     .category__ {
@@ -48,6 +59,11 @@
         border-radius: 30px;
         padding: 0 40px 30px 40px;
 
+        @include screen-md {
+          padding: 0 20px 20px 20px;
+        }
+
+
         a {
           display: block;
           text-align: center;
@@ -59,6 +75,13 @@
             img {
               display: block;
               padding-bottom: 50px;
+
+              @include screen-md {
+                padding-bottom: 10px;
+                max-width: 70%;
+                margin: 0 auto;
+              }
+
             }
 
         }

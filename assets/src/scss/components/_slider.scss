@@ -7,7 +7,7 @@
     .slider__badge {
       position: absolute;
       top: 50px;
-      left: 44.3%;
+      left: 42.5%;
     }
 
     .slider-item {
@@ -48,6 +48,15 @@
             font: $font-h1;
             letter-spacing: -2.56px;
             line-height: 77.45px;
+
+            @include screen-md {
+              font: $font-h1-tablet;
+            }
+
+            @include screen-sm {
+              font: $font-h1-mobile;
+            }
+
           }
 
           p {
