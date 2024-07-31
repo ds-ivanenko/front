@@ -1,6 +1,15 @@
 .hero__slider {
   padding-top: 40px;
 
+  .header-class-pagination {
+    top: 410px;
+
+    .header-class-page.is-active {
+      background: #000;
+    }
+
+  }
+
   .splide__slide {
     position: relative;
 
@@ -8,6 +17,25 @@
       position: absolute;
       top: 50px;
       left: 42.5%;
+
+      @include screen-lg {
+        top: 10px;
+        z-index: 10;
+      }
+
+      @include screen-xs {
+        left: 70%;
+      }
+
+      img {
+
+        @include screen-md {
+          width: 70%;
+
+        }
+
+      }
+
     }
 
     .slider-item {
@@ -17,9 +45,24 @@
       border-radius: 36px;
       position: relative;
 
-      .slider-info {
+      @include screen-xs {
+        display: block;
+      }
 
+      .slider-info {
         padding: 50px 0 50px 50px;
+
+        @include screen-lg {
+          padding: 20px;
+        }
+
+        @include screen-xs {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: 9;
+          background: rgba(231, 250, 254, .5);
+        }
 
         .slider__hot_recipes {
           display: flex;
@@ -49,18 +92,37 @@
             letter-spacing: -2.56px;
             line-height: 77.45px;
 
-            @include screen-md {
+            @include screen-lg {
               font: $font-h1-tablet;
             }
 
-            @include screen-sm {
+            @include screen-md {
               font: $font-h1-mobile;
+              letter-spacing: .56px;
+            }
+
+            @include screen-sm {
+              font: $font-h4-mobile;
+              line-height: 32px;
+              letter-spacing: -0.56px;
+              font-weight: 700;
             }
 
           }
 
           p {
             margin-top: 24px;
+
+            @include screen-sm {
+              font:$font-smaller;
+            }
+
+            @include screen-xs {
+              color: $color-primary-second-light;
+              margin-top: 14px;
+            }
+
+
           }
         }
 
@@ -71,6 +133,19 @@
           color: $color-primary-light;
           margin: 30px 0 99px 0;
 
+          @include screen-lg {
+            margin: 30px 0 30px 0;
+          }
+
+          @include screen-sm {
+            font: $font-caption;
+            gap: 5px;
+          }
+
+          @include screen-xs {
+            margin: 20px 0;
+          }
+
           .timer-info, .cutlery {
             display: flex;
             align-items: center;
@@ -79,13 +154,30 @@
             background: rgba(0, 0, 0, 0.05);
             padding: 8px 16px;
 
+            @include screen-md {
+              padding: 8px 10px;
+              gap: 5px;
+              text-align: center;
+            }
+
+            @include screen-sm {
+              background: rgba(0, 0, 0, .1);
+              color: #000;
+            }
+
           }
 
         }
 
         .author {
           display: flex;
+          flex-wrap: wrap;
           gap: 157px;
+
+          @include screen-lg {
+            gap: 20px;
+            justify-content: center;
+          }
 
           .author-details {
             display: flex;
@@ -97,12 +189,22 @@
                 letter-spacing: -0.32px;
                 font-weight: 700;
                 margin: 0 0 8px 0;
+
+                @include screen-lg {
+                  margin: 0;
+                  font: $font-smaller;
+                  font-weight: 700;
+                }
+
               }
 
               span {
                 color: $color-primary-light;
                 letter-spacing: -0.28px;
                 font-weight: 500;
+                @include screen-lg {
+                  font: $font-smaller;
+                }
               }
             }
 
@@ -113,9 +215,17 @@
       }
 
       .slider-image {
+
+        @include screen-xs {
+          //mask-image: linear-gradient(180deg, rgba(231, 249, 253, 0.00)0%, #E7F9FD 100%);
+          opacity: 0.5;
+        }
+
         img {
           border-radius: 0 36px 36px 0;
           height: 100%;
+          max-width: 100%;
+          object-fit: cover;
         }
       }
 

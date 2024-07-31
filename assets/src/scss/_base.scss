@@ -65,4 +65,9 @@ body {
   max-width: $container-width;
   padding: 0 80px;
   margin: 0 auto;
+
+  @include screen-lg {
+    max-width: 1300px;
+    padding: 0 10px;
+  }
 }

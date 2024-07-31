@@ -174,7 +174,14 @@ var splide = new Splide('.splide', {
   pagination: false,
   breakpoints: {
     1279: {
-      fixedWidth: '70%'
+      fixedWidth: '95%'
+    },
+    480: {
+      pagination: true,
+      classes: {
+        pagination: 'splide__pagination header-class-pagination',
+        page: 'splide__pagination__page header-class-page'
+      }
     }
   }
 });

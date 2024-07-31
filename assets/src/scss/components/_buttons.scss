@@ -35,6 +35,9 @@
       background: #000;
       color: #fff;
       padding: 21px 53px 22px 52px;
+      @include screen-lg {
+        padding: 15px;
+      }
 
       &:hover {
         background: $color-primary-light;
