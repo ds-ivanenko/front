@@ -1,0 +1,60 @@
+.author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 157px;
+
+  @include screen-lg {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  @include screen-xs {
+    padding: 20px 0;
+  }
+
+  @include screen-xs-smaller {
+    padding: 10px 0;
+  }
+
+  @include screen-xs-small {
+    gap: 15px;
+  }
+
+  .author-details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include screen-xs-smaller {
+      gap: 8px;
+    }
+
+
+    .author-info {
+      p {
+        color: $color-primary;
+        letter-spacing: -0.32px;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+
+        @include screen-lg {
+          margin: 0;
+          font: $font-smaller;
+          font-weight: 700;
+        }
+
+      }
+
+      span {
+        color: $color-primary-light;
+        letter-spacing: -0.28px;
+        font-weight: 500;
+        @include screen-lg {
+          font: $font-smaller;
+        }
+      }
+    }
+
+  }
+
+}

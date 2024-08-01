@@ -1,0 +1,167 @@
+ .title__block {
+    justify-content: space-between;
+
+    .additional-info {
+      margin: 48px 0 0 0;
+
+      .author,
+      .timer-info,
+      .timer-info {
+
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 1px;
+          height: 50px;
+          background-color: rgba(0, 0, 0, .1);
+        }
+
+      }
+
+      .author {
+        padding-right: 58px;
+      }
+
+      .timer-info,
+      .timer-info {
+        background: none;
+        padding: 0 32px 0 16px;
+      }
+
+      .cutlery {
+        background: none;
+        padding: 0 0 0 16px;
+      }
+
+      .info-title {
+
+        p {
+          font: $font-caption;
+          color: $color-primary;
+          letter-spacing: 1.2px;
+          line-height: 14.52px;
+          font-weight: 500;
+          margin: 0 0 8px 0;
+
+          @include screen-lg {
+            margin: 0;
+            font: $font-smaller;
+            font-weight: 700;
+          }
+
+        }
+
+        span {
+          display: block;
+          font: $font-smaller;
+          letter-spacing: -0.28px;
+          line-height: 16.94px;
+          font-weight: 500;
+        }
+
+      }
+
+    }
+
+    .actions {
+
+      &-block {
+        display: flex;
+        gap: 32px;
+        padding-top: 48px;
+        text-align: center;
+
+        .action {
+          &-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #e7fafe;
+            border-radius: 50%;
+            padding: 28px;
+          }
+
+          &-link {
+            font: $font-caption;
+            font-weight: 500;
+            line-height: 14.52px;
+            letter-spacing: 1.2px;
+
+            .text {
+              padding-top: 16px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+ .recipe-section {
+
+   p {
+     font-weight: 400;
+     line-height: 28px;
+   }
+
+  .recipe-wrap {
+    display: flex;
+    gap: 30px;
+    padding: 69px 0 67px;
+
+    .recipe__video {
+      border-radius: 30px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .nutrition-information {
+      background-color: #E7FAFE;
+      border-radius: 30px;
+      padding: 32px;
+
+      h3 {
+        font: $font-h5-mobile;
+        line-height: 29.05px;
+        letter-spacing: -0.96px;
+        padding-bottom: 8px;
+      }
+
+      .info__list-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+        .name,
+        .value {
+          font: $font-larger;
+          font-weight: 500;
+          line-height: 21.78px;
+          letter-spacing: -0.72px;
+        }
+
+        .name {
+          color: $color-primary-light;
+        }
+
+
+      }
+
+      .item-bottom__text {
+        padding-top: 167px;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+}

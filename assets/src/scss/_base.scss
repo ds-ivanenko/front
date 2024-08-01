@@ -20,6 +20,11 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   padding: 0;
   text-decoration: none;
@@ -70,4 +75,37 @@ body {
     max-width: 1300px;
     padding: 0 10px;
   }
+}
+
+h1 {
+  font: $font-h1;
+  letter-spacing: -2.56px;
+  line-height: 77.45px;
+
+  @include screen-lg {
+    font: $font-h1-tablet;
+  }
+
+  @include screen-md {
+    font: $font-h1-mobile;
+    letter-spacing: .56px;
+  }
+
+  @include screen-sm {
+    font: $font-h4-mobile;
+    line-height: 32px;
+    letter-spacing: -0.56px;
+    font-weight: 700;
+  }
+
+  @include screen-xs-smaller {
+    font: $font-large;
+    font-weight: 700;
+  }
+
+}
+
+.title__block {
+  padding-top: 80px;
+  display: flex;
 }
