@@ -47,3 +47,16 @@
     @content;
   }
 }
+
+
+@mixin screen-xs-small {
+  @media (max-width: #{$screen-xs-small}) {
+    @content;
+  }
+}
+
+@mixin screen-xs-smaller {
+  @media (max-width: #{$screen-xs-smaller}) {
+    @content;
+  }
+}

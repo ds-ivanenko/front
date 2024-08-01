@@ -2,7 +2,7 @@
   padding-top: 40px;
 
   .header-class-pagination {
-    top: 410px;
+    top: 103%;
 
     .header-class-page.is-active {
       background: #000;
@@ -30,7 +30,7 @@
       img {
 
         @include screen-md {
-          width: 70%;
+          width: 60%;
 
         }
 
@@ -77,6 +77,19 @@
           letter-spacing: -0.28px;
           font-weight: 600;
 
+          @include screen-xs {
+            margin-bottom: 50px;
+          }
+
+          @include screen-xs-smaller {
+            margin-bottom: 20px;
+          }
+
+
+          @include screen-xs-small {
+            margin-bottom: 15px;
+          }
+
           .icon.hot_recipes, span {
             display: block;
           }
@@ -108,6 +121,11 @@
               font-weight: 700;
             }
 
+            @include screen-xs-smaller {
+              font: $font-large;
+              font-weight: 700;
+            }
+
           }
 
           p {
@@ -118,6 +136,15 @@
             }
 
             @include screen-xs {
+              color: $color-primary-second-light;
+              margin-top: 34px;
+            }
+
+            @include screen-xs-smaller {
+              margin-top: 14px;
+            }
+
+            @include screen-xs-small {
               color: $color-primary-second-light;
               margin-top: 14px;
             }
@@ -143,7 +170,15 @@
           }
 
           @include screen-xs {
-            margin: 20px 0;
+            margin: 25px 0;
+          }
+
+          @include screen-xs-smaller {
+            margin-bottom: 15px;
+          }
+
+          @include screen-xs-small {
+            margin: 5px 0;
           }
 
           .timer-info, .cutlery {
@@ -179,10 +214,27 @@
             justify-content: center;
           }
 
+          @include screen-xs {
+            padding: 20px 0;
+          }
+
+          @include screen-xs-smaller {
+            padding: 10px 0;
+          }
+
+          @include screen-xs-small {
+            gap: 15px;
+          }
+
           .author-details {
             display: flex;
             align-items: center;
             gap: 16px;
+
+            @include screen-xs-smaller {
+              gap: 8px;
+            }
+
 
             .author-info {
               p {

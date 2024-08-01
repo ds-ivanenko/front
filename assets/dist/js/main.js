@@ -177,6 +177,7 @@ var splide = new Splide('.splide', {
       fixedWidth: '95%'
     },
     480: {
+      fixedWidth: '100%',
       pagination: true,
       classes: {
         pagination: 'splide__pagination header-class-pagination',
