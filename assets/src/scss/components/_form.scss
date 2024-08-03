@@ -17,3 +17,84 @@ input.input-text {
     box-shadow: unset;
   }
 }
+
+
+.checkbox-item {
+
+  position: relative;
+
+  label {
+
+    .text {
+      padding: 0 0 0 48px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      input ~ {
+
+        .checkmark {
+          background-color: $color-primary;
+        }
+
+      }
+
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ {
+
+        .checkmark {
+          background-color: $color-primary;
+          border: none;
+
+          &:after {
+            display: block;
+          }
+
+        }
+
+      }
+
+      &:checked ~ .text {
+        color: $color-primary-light;
+        text-decoration: line-through;
+      }
+
+    }
+
+    .checkmark {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      border: 2px solid #DBE2E5;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+
+      }
+
+    }
+
+  }
+
+}

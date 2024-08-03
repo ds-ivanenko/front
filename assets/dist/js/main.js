@@ -18,6 +18,29 @@ window.assets = {
 
 /***/ }),
 
+/***/ "./assets/src/js/forms.js":
+/*!********************************!*\
+  !*** ./assets/src/js/forms.js ***!
+  \********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+document.querySelectorAll('.checkbox-item input').forEach(input => {
+  console.log('input');
+  input.addEventListener('change', function () {
+    const blockItem = this.closest('.directions__block-item');
+    if (blockItem) {
+      if (this.checked) {
+        blockItem.classList.add('checked');
+      } else {
+        blockItem.classList.remove('checked');
+      }
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./assets/src/js/header.js":
 /*!*********************************!*\
   !*** ./assets/src/js/header.js ***!
@@ -156,38 +179,6 @@ window.Helpers = new class {
   }
 }();
 
-/***/ }),
-
-/***/ "./assets/src/js/sliders.js":
-/*!**********************************!*\
-  !*** ./assets/src/js/sliders.js ***!
-  \**********************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-var splide = new Splide('.splide', {
-  type: 'loop',
-  fixedWidth: '1280px',
-  focus: 'center',
-  arrows: false,
-  gap: '40px',
-  pagination: false,
-  breakpoints: {
-    1279: {
-      fixedWidth: '95%'
-    },
-    480: {
-      fixedWidth: '100%',
-      pagination: true,
-      classes: {
-        pagination: 'splide__pagination header-class-pagination',
-        page: 'splide__pagination__page header-class-page'
-      }
-    }
-  }
-});
-splide.mount();
-
 /***/ })
 
 /******/ 	});
@@ -237,10 +228,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers.js */ "./assets/src/js/helpers.js");
 /* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ "./assets/src/js/header.js");
 /* harmony import */ var _assets_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets.js */ "./assets/src/js/assets.js");
-/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sliders.js */ "./assets/src/js/sliders.js");
+/* harmony import */ var _forms_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./forms.js */ "./assets/src/js/forms.js");
 
 
 
+// import "./sliders.js"
 
 /******/ })()
 ;
