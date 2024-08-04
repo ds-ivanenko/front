@@ -11,14 +11,23 @@
     margin: 48px 0 0 0;
 
     @include screen-md {
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      position: relative;
+      margin: 28px 0 0 0;
+
     }
+
 
     .author,
     .timer-info,
     .timer-info {
 
       position: relative;
+
+      @include screen-md {
+        display: block;
+      }
 
       &:after {
         content: '';
@@ -28,23 +37,63 @@
         width: 1px;
         height: 50px;
         background-color: rgba(0, 0, 0, .1);
+
+        @include screen-md {
+          display: none;
+        }
+
       }
 
     }
 
     .author {
+
       padding-right: 58px;
+
+      @include screen-md {
+        margin: 0 auto;
+      }
+
+      @include screen-xs {
+        padding-right: 0;
+
+        .author-details {
+          display: block;
+
+          img {
+            margin: 0 auto;
+          }
+
+        }
+
+      }
+
     }
 
     .timer-info,
     .timer-info {
       background: none;
       padding: 0 32px 0 16px;
+
+      @include screen-xs {
+        padding: 0;
+      }
+
     }
 
     .cutlery {
       background: none;
       padding: 0 0 0 16px;
+      position:relative;
+
+      @include screen-md {
+        margin: 0 auto;
+      }
+
+      @include screen-xs {
+       padding: 0;
+      }
+
     }
 
     .info-title {
@@ -339,6 +388,11 @@
           font: $font-h5-mobile;
           line-height: 29.05px;
           letter-spacing: -0.48px;
+
+          @include screen-xs {
+            font: $font-larger;
+          }
+
         }
 
         img {
@@ -444,6 +498,7 @@
     width: 56px;
     right: 15px;
     bottom: 15px;
+    z-index: 9999;
   }
 
   &:hover {
@@ -561,4 +616,3 @@
   }
 
 }
-
