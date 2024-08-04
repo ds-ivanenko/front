@@ -108,4 +108,10 @@ h1 {
 .title__block {
   padding-top: 80px;
   display: flex;
+
+  &.center-block {
+    justify-content: center;
+    text-align: center;
+  }
+
 }

@@ -1,0 +1,93 @@
+.title__block {
+
+  p {
+    padding: 24px 0 80px;
+  }
+
+}
+
+.blog {
+
+  .recipe-wrap {
+
+    .content-info {
+      border-bottom: none;
+    }
+
+  }
+
+}
+
+.item__wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 32px 0;
+
+  @include screen-sm-smaller {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .post-image {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .post-info {
+
+    flex-basis: 510px;
+
+    h3 {
+      letter-spacing: -0.96px;
+    }
+
+    p {
+      font: $font-standard;
+      font-weight: 400;
+      line-height: 28px;
+      padding: 32px 0 16px;
+    }
+
+    .post-details {
+      display: flex;
+      align-items: center;
+
+
+      .details-author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font: $font-standard;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.32px;
+        position: relative;
+        padding-right: 24px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 40px;
+          top: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.10);;
+        }
+
+      }
+
+      .details-date {
+        font: $font-smaller;
+        color: $color-primary-light;
+        font-weight: 500;
+        line-height: 16.94px;
+        letter-spacing: -0.28px;
+        padding-left: 24px;
+      }
+
+    }
+
+  }
+}

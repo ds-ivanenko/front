@@ -1,0 +1,50 @@
+.pagination {
+
+  padding-top: 80px;
+  font: $font-larger;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.36px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    li {
+      width: 64px;
+      height: 64px;
+      padding: 20px 0 0 25px;
+      border-radius: 16px;
+      border:  1px solid rgba(0, 0, 0, 0.10);
+
+      @include screen-sm-smaller {
+        width: 34px;
+        height: 34px;
+        padding: 7px 0 0 11px;
+        border-radius: 6px;
+      }
+
+      &.current {
+        background-color: $color-primary;
+        border: none;
+        span {
+          color: #fff;
+
+        }
+
+      }
+
+      a {
+        font: $font-larger;
+        font-weight: 700;
+        line-height: 21.78px;
+        letter-spacing: -0.36px;
+      }
+
+
+    }
+
+  }
+
+}

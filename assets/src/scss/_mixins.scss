@@ -18,6 +18,12 @@
   }
 }
 
+@mixin screen-sm-smaller {
+  @media (max-width: #{$screen-sm-smaller}) {
+    @content;
+  }
+}
+
 @mixin screen-xs {
   @media (max-width: #{$screen-xs}) {
     @content;

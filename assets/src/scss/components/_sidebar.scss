@@ -1,0 +1,312 @@
+
+.content-section {
+
+  .recipe-wrap {
+
+    padding: 80px 0 0;
+
+    @include screen-md {
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
+
+.recipe-wrap {
+
+  display: flex;
+  gap: 40px;
+  padding: 69px 0 67px;
+  justify-content: space-between;
+
+
+  @include screen-sm-min {
+    align-items: center;
+  }
+
+  @include screen-sm {
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  @include screen-lg-min {
+    align-items: normal;
+
+  }
+
+
+
+  .recipe__video {
+    border-radius: 30px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-play {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    img {
+      @include screen-md {
+        height: 100%;
+      }
+    }
+
+  }
+
+  .nutrition-information,
+  .content-sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #E7FAFE;
+    border-radius: 30px;
+    padding: 32px;
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    h3 {
+      font: $font-h5-mobile;
+      line-height: 29.05px;
+      letter-spacing: -0.96px;
+      padding-bottom: 8px;
+    }
+
+    .info__list-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+      .name,
+      .value {
+        font: $font-larger;
+        font-weight: 500;
+        line-height: 21.78px;
+        letter-spacing: -0.72px;
+      }
+
+      .name {
+        color: $color-primary-light;
+      }
+
+
+    }
+
+    .item-bottom__text {
+      text-align: center;
+      margin-top: auto;
+    }
+
+  }
+
+  .nutrition-information {
+
+    @include screen-sm {
+      flex-basis: 100%;
+      flex-grow: unset;
+      flex-shrink: unset;
+    }
+
+  }
+
+  .content-sidebar {
+    background: none;
+    padding: 0;
+    align-self: baseline;
+
+    @include screen-md {
+
+      flex-basis: unset;
+      flex-grow: unset;
+      flex-shrink: unset;
+
+      .sidebar__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include screen-sm {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+      }
+    }
+
+  }
+
+  .content-info,
+  .content-sidebar {
+
+    h2 {
+      font: $font-h2-mobile;
+      line-height: 43.57px;
+      letter-spacing: -1.44px;
+    }
+
+  }
+
+  .content-info {
+
+    border-bottom: 1px solid #eee;
+
+    h2 {
+      padding-bottom: 48px;
+    }
+
+    h3 {
+      font: $font-h5-mobile;
+      line-height: 29.05px;
+      letter-spacing: -0.48px;
+    }
+
+    .ingredients {
+      padding-bottom: 64px;
+    }
+
+
+  }
+
+
+  .content-sidebar {
+
+    h2 {
+      padding-bottom: 32px;
+
+    }
+
+  }
+
+  .ingredients-block-item {
+    padding: 32px 0;
+    font: $font-larger;
+    font-weight: 400;
+    line-height: 21.78px;
+    letter-spacing: -0.36px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+  }
+
+  .directions {
+
+    h2 {
+      padding-bottom: 32px;
+
+    }
+
+    .directions__block {
+
+      &-item {
+
+        .text {
+          font: $font-h5-mobile;
+          line-height: 29.05px;
+          letter-spacing: -0.48px;
+
+          @include screen-xs {
+            font: $font-larger;
+          }
+
+        }
+
+        img {
+          padding: 0 0 24px 48px;
+        }
+
+        .checkbox-item {
+          label {
+            .checkmark {
+              bottom: 3px;
+            }
+          }
+        }
+
+        p {
+          color: $color-primary-light;
+          font-weight: 400;
+          line-height: 26px;
+          letter-spacing: -0.32px;
+          padding: 24px 0 48px 48px;
+        }
+
+        &.checked .content p {
+          color: $color-primary-light;
+          text-decoration: line-through;
+        }
+
+        &.checked .content img {
+          opacity: 0.5;
+        }
+
+      }
+
+    }
+
+  }
+
+
+}
+
+.sidebar__list {
+
+  &-item {
+
+    padding-bottom: 24px;
+
+    a {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+
+
+      .item__image {
+        max-width: 180px;
+        border-radius: 30px;
+        overflow: hidden;
+      }
+
+      .item__info {
+
+        .item__title {
+
+          h3 {
+            font: $font-h3-sidebar;
+            line-height: 28px;
+            letter-spacing: -0.8px;
+          }
+
+        }
+
+        p {
+          font: $font-smaller;
+          font-weight: 500;
+          line-height: 16.94px;
+          letter-spacing: -0.28px;
+        }
+
+      }
+
+
+    }
+
+    &.ads {
+      padding-top: 56px;
+
+      @include screen-md {
+        padding-top: 0;
+      }
+
+    }
+
+  }
+
+}
