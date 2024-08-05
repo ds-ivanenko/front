@@ -1,0 +1,36 @@
+.contact-wrap {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 80px;
+
+  .contact-form {
+    flex-basis: 840px;
+  }
+
+  .contact-image {
+    padding: 0 30px;
+    background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
+    border-radius: 30px;
+    max-height: 472px;
+
+    img {
+      height: 100%;
+    }
+
+    @include screen-md {
+      display: none;
+    }
+
+  }
+
+  .form-submit {
+    padding-top: 24px;
+
+    @include screen-md {
+      text-align: center;
+    }
+
+  }
+
+}

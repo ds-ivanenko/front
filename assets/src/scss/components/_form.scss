@@ -138,3 +138,62 @@ input.input-text {
   border-radius: 24px;
   max-width: 700px;
 }
+
+
+.form-row {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 24px;
+
+  @include screen-xs {
+    flex-wrap: wrap;
+  }
+
+  .form-element {
+    flex-basis: 400px;
+
+    &.form-textarea {
+      flex-basis: 100%;
+    }
+
+  }
+
+  label {
+    display: block;
+    font: $font-caption;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    color: $color-primary-light;
+    padding-bottom: 12px;
+  }
+
+  input,
+  textarea,
+  select {
+
+    font: $font-smaller;
+    color: $color-primary-light;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+
+    padding: 18px 20px;
+    width: 100%;
+
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    min-height: 60px;
+
+    &::placeholder {
+      font: $font-smaller;
+      color: $color-primary-light;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+    }
+
+  }
+
+}
